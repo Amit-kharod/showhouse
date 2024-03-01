@@ -1,0 +1,7 @@
+.shows {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  gap: 20px;
+  padding: 20px;
+}
