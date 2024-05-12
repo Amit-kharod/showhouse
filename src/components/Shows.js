@@ -2,6 +2,7 @@ import Show from "./Show";
 import "./Shows.css"
 
 function Shows() {
+
   const ShowsData = [
     {
       ImageUrl:
