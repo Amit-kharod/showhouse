@@ -3,9 +3,36 @@
   border-radius: 5%;
 }
 
-.search-filter {
+.search-filter, .sort-filter, .rating-filter {
   margin: 10px;
   display: flex;
   gap: 5px;
   align-items: center;
+}
+
+.search-filter {
+  margin-left: auto;
+}
+
+.filters {
+  display: flex;
+  width: 1000px;
+  padding: 20px;
+  align-items: center ;
+}
+
+#sort-dropdown, #rating-dropdown {
+  padding: 10px;
+  background-color: white;
+}
+
+
+.clear-filters {
+  padding: 10px;
+  background-color: rgb(91, 116, 229);
+  border: none;
+  border-radius: 5%;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
 }

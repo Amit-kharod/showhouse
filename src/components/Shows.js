@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Show from "./Show";
 import "./Shows.css";
+import { getFilteredShow } from "../utils/helper";
 
-function Shows({ searchInput }) {
+function Shows({ filters }) {
+
   const ShowsData = [
     {
       ImageUrl:
@@ -67,14 +69,13 @@ function Shows({ searchInput }) {
         "The misadventures of Doraemon, a robot cat from the future, who with his gadgets, is sent back in time to help make Nobita Nobi, a boy without much talent, a better person.",
     },
   ];
+ 
+  let filteredShows = getFilteredShow(ShowsData, filters);
 
-  let filteredBySearch = ShowsData.filter((Show) =>
-    Show.Name.toLowerCase().includes(searchInput.toLowerCase())
-  );
 
   return (
     <div className="shows">
-      {filteredBySearch.map((show) => {
+      {filteredShows.map((show) => {
         const startedFrom = show.Period.split("-")[0].slice(1);
         let till = show.Period.split("-")[1].slice(0, -1);
 

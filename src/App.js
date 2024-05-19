@@ -3,14 +3,16 @@ import Filters from "./components/Filters";
 import Shows from "./components/Shows";
 
 function App() {
-
-  const [searchInput, setSearchInput] = useState("");
-
+  const [filters, setFilters] = useState({
+    searchInput: "",
+    sortByInput: "relavance",
+    ratingInput: "all",
+  });
 
   return (
     <div className="app">
-      <Filters searchInput={searchInput} setSearchInput={setSearchInput}/>
-      <Shows searchInput={searchInput}/>
+      <Filters filters={filters} setFilters={setFilters} />
+      <Shows filters={filters} />
     </div>
   );
 }
