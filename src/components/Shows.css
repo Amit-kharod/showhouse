@@ -5,3 +5,13 @@
   gap: 20px;
   padding: 20px;
 }
+
+.new-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(198, 198, 198);
+  height: 70%;
+  cursor: pointer;
+}
