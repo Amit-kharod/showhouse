@@ -1,5 +1,6 @@
 .show-img {
   width: 200px;
+  height: 70%;
 }
 
 .period {
@@ -22,4 +23,11 @@
 
 .rating img {
   width: 38px;
+}
+
+.like
+{
+  display: flex;
+  gap:3px;
+  padding: 5px 0px;
 }

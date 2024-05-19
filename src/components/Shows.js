@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import Show from "./Show";
-import "./Shows.css"
+import "./Shows.css";
 
-function Shows() {
-
+function Shows({ searchInput }) {
   const ShowsData = [
     {
       ImageUrl:
@@ -68,9 +68,13 @@ function Shows() {
     },
   ];
 
+  let filteredBySearch = ShowsData.filter((Show) =>
+    Show.Name.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
   return (
     <div className="shows">
-      {ShowsData.map((show) => {
+      {filteredBySearch.map((show) => {
         const startedFrom = show.Period.split("-")[0].slice(1);
         let till = show.Period.split("-")[1].slice(0, -1);
 

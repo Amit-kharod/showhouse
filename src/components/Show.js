@@ -3,15 +3,11 @@ import { useState } from "react";
 import "./Show.css";
 
 function Show({ imageURL, startedFrom, till, name, rating }) {
-
   let [counter, setCounter] = useState(0);
 
-  console.log(counter)
-
-  const likeButtonHandler = ()=> {
-    setCounter((prevCounter)=> prevCounter + 1);
-    console.log(counter)
-  }
+  const likeButtonHandler = () => {
+    setCounter((prevCounter) => prevCounter + 1);
+  };
 
   return (
     <div>
@@ -19,8 +15,13 @@ function Show({ imageURL, startedFrom, till, name, rating }) {
       <p className="period">
         {startedFrom}-{till}
       </p>
-      <Heart onClick={likeButtonHandler} fill={counter > 0 ? "red" : 'white'}/>
-      {counter}
+      <div className="like">
+        <Heart
+          onClick={likeButtonHandler}
+          fill={counter > 0 ? "red" : "white"}
+        />
+        {counter}
+      </div>
       <h2 className="title">{name}</h2>
       <p className="rating">
         <img src="./images/imdb.png" alt="" />
